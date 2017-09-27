@@ -122,14 +122,11 @@ public class ContentUtils {
     public static ContentValues platformInfoToContentValues(@NonNull GamePlatformInfoList platform) {
         ContentValues values = new ContentValues();
 
-        Timber.d("platform company: ", platform.company());
-        Timber.d("platform company name: ", platform.company().name());
-
         values.put(TrackedPlatformEntry.COLUMN_PLATFORM_ID, platform.id());
         values.put(TrackedPlatformEntry.COLUMN_PLATFORM_NAME, platform.name());
         values.put(TrackedPlatformEntry.COLUMN_PLATFORM_ORIGINAL_PRICE, platform.original_price());
         values.put(TrackedPlatformEntry.COLUMN_PLATFORM_RELEASE_DATE, platform.release_date());
-        values.put(TrackedPlatformEntry.COLUMN_PLATFORM_COMPANY_NAME, platform.company().name());
+        values.put(TrackedPlatformEntry.COLUMN_PLATFORM_COMPANY_NAME, platform.company() != null ? platform.company().name() : "UNKNOWN COMPANY");
         values.put(TrackedPlatformEntry.COLUMN_PLATFORM_SMALL_IMAGE, platform.image().small_url());
         values.put(TrackedPlatformEntry.COLUMN_PLATFORM_MEDIUM_IMAGE, platform.image().medium_url());
         values.put(TrackedPlatformEntry.COLUMN_PLATFORM_HD_IMAGE, platform.image().super_url());
