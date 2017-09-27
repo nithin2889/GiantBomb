@@ -118,6 +118,7 @@
     type and scrambled it to make a type specimen book.
     </string>
 
+    <string name="dummy_hyphen" translatable="false">&#8211;</string>
     <string name="dummy_game_name" translatable="false">Desert Strike: Return to the Gulf</string>
     <string name="dummy_game_review_with_text" translatable="false">No of Reviews: 10</string>
     <string name="dummy_game_details_header" translatable="false">Desert Strike</string>

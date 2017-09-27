@@ -55,6 +55,8 @@ public class CharacterDetailsFragment extends
     @BindView(R.id.character_details_description)
     TextView characterDescription;
 
+    @BindString(R.string.dummy_hyphen)
+    String hyphen;
     @BindString(R.string.character_franchise_name)
     String franchiseFormat;
 
@@ -188,7 +190,7 @@ public class CharacterDetailsFragment extends
         if (text != null) {
             textView.setText(text);
         } else {
-            textView.setText("-");
+            textView.setText(hyphen);
         }
     }
 
@@ -197,7 +199,7 @@ public class CharacterDetailsFragment extends
             String franchiseName = String.format(Locale.US, franchiseFormat, franchise.name());
             textView.setText(franchiseName);
         } else {
-            textView.setText("-");
+            textView.setText(hyphen);
         }
     }
 

@@ -69,6 +69,8 @@ public class PlatformDetailsFragment extends
     /*@BindView(R.id.platform_details_games_view)
     RecyclerView gamesRecyclerView;*/
 
+    @BindString(R.string.dummy_hyphen)
+    String hyphen;
     @BindString(R.string.msg_tracked)
     String messageTracked;
     @BindString(R.string.msg_track_removed)
@@ -317,7 +319,7 @@ public class PlatformDetailsFragment extends
         if (company != null) {
             textView.setText(company.name());
         } else {
-            textView.setText("-");
+            textView.setText(hyphen);
         }
     }
 

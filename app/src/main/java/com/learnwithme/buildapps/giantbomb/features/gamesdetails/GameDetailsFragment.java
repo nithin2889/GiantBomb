@@ -71,6 +71,8 @@ public class GameDetailsFragment
     @BindView(R.id.game_details_characters_list)
     ListView charactersList;
 
+    @BindString(R.string.dummy_hyphen)
+    String hyphen;
     @BindString(R.string.msg_bookmarked)
     String messageBookmarked;
     @BindString(R.string.msg_bookmark_removed)
@@ -294,7 +296,7 @@ public class GameDetailsFragment
         if(date != null) {
             textView.setText(date);
         } else {
-            textView.setText("-");
+            textView.setText(hyphen);
         }
     }
 
