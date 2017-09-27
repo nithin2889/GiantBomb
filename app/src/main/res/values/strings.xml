@@ -1,0 +1,141 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Giant Bomb</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Menu items -->
+    <string name="action_choose_date">Choose date</string>
+    <string name="action_search">Search</string>
+    <string name="action_clear_search_query">Clear search</string>
+    <string name="action_bookmark">Bookmark</string>
+    <string name="action_track">Track</string>
+
+    <!-- Navigation drawer items -->
+    <string name="navigation_game">Games</string>
+    <string name="navigation_platform">Platforms</string>
+    <string name="navigation_character">Characters</string>
+    <string name="navigation_collection">My Collection</string>
+    <string name="navigation_tracker">My Tracker</string>
+    <string name="navigation_settings">Settings</string>
+
+    <!-- Games -->
+    <string name="games_title_format">Games - <xliff:g id="date">%s</xliff:g></string>
+    <string name="games_search_hint">Enter the name here&#8230;</string>
+
+    <!-- Game details -->
+    <string name="game_details_activity_title">Game Details</string>
+    <string name="game_details_date_added">Date Added:</string>
+    <string name="game_details_date_last_updated">Date Last Updated:</string>
+    <string name="game_details_characters">Characters:</string>
+
+    <!-- Platforms -->
+    <string name="platforms_fragment_title">Platforms</string>
+    <string name="platforms_company_text">by <xliff:g id="company">%s</xliff:g></string>
+    <string name="platforms_release_date">released on: <xliff:g id="release_date">%s</xliff:g></string>
+
+    <!-- Platform details -->
+    <string name="platform_details_activity_title">Platform details</string>
+    <string name="platform_details_company">Company:</string>
+    <string name="platform_details_company_name">Other company in this platform:</string>
+    <string name="platform_details_game_number">Number of Reviews: <xliff:g id="number">%d</xliff:g></string>
+    <string name="platform_details_release_date">Release Date: </string>
+
+    <!-- Platforms tracker -->
+    <string name="platforms_tracker_fragment_title">Platforms tracker</string>
+
+    <!-- Characters -->
+    <string name="characters_fragment_title">Characters</string>
+
+    <!-- Character details -->
+    <string name="character_details_activity_title">Character Details</string>
+    <string name="character_details_real_name">Real Name:</string>
+    <string name="character_details_aliases">Aliases:</string>
+    <string name="character_details_birth">Date Of Birth:</string>
+    <string name="character_details_date_added">Date Added:</string>
+    <string name="character_details_date_last_updated">Date Last Updated:</string>
+    <string name="character_details_origin">Franchise:</string>
+    <string name="character_franchise_name"><xliff:g id="franchise">%s + " "</xliff:g></string>
+
+    <!-- Errors and info messages -->
+    <string name="error_data_not_available">API server unavailable!\nPlease check your internet connection and try again.</string>
+    <string name="error_data_not_available_short">API server unavailable!</string>
+    <string name="error_game_not_available">Game is unavailable!\nPlease check your internet connection and try again.</string>
+    <string name="msg_no_games_today">No available games found!\nPlease try again later or choose another date.</string>
+    <string name="msg_no_games_owned">Your collection is empty!\nMark your games as favorite first</string>
+    <string name="msg_no_platforms_found">No platforms found! Please choose another name and try again.</string>
+    <string name="msg_no_platforms_tracked">No tracked platforms found!\nMark your favorite platforms first.</string>
+    <string name="msg_platforms_start">Search to load your platform data.</string>
+    <string name="msg_bookmarked">Game added to collection</string>
+    <string name="msg_bookmark_removed">Game removed from collection</string>
+    <string name="msg_tracked">Platform added to tracker</string>
+    <string name="msg_track_removed">Platform removed from tracker</string>
+    <string name="msg_no_characters_found">No characters found! Please choose another name and try again.</string>
+    <string name="msg_characters_start">Search to load your favorite characters data.</string>
+
+    <!-- Widget -->
+    <string name="widget_title">Games released/updated today</string>
+    <string name="widget_empty_text">No available games found.</string>
+
+    <!-- ShowcaseView guide -->
+    <!-- Games -->
+    <string name="showcase_games_title">Games view</string>
+    <string name="showcase_games_datepicker">Choose a specific date and Uncle GB will load all game releases for you.</string>
+    <string name="showcase_games_search">Or search for games by entering its name</string>
+
+    <!-- Notifications -->
+    <string name="notification_message_text">Tracked Games New Updates:</string>
+
+    <!-- Settings -->
+    <string name="prefs_category_title">Data persistence</string>
+    <string name="prefs_sync_title">Sync period</string>
+    <string name="prefs_sync_dialog_title">Choose sync period:</string>
+    <string name="prefs_sync_once">Once a day</string>
+    <string name="prefs_sync_twice">Twice a day</string>
+    <string name="prefs_sync_three_times">Thrice a day</string>
+    <string name="prefs_sync_four_times">Four times a day</string>
+    <string name="prefs_sync_default">24</string>
+    <string name="prefs_file_name" translatable="false">com.learnwithme.buildapps.giantbomb_preferences</string>
+    <string name="prefs_sync_period_key" translatable="false">prefs_sync_period_in_hours</string>
+    <string name="prefs_games_showcased_key" translatable="false">prefs_games_showcased</string>
+    <string name="prefs_displayed_notifications" translatable="false">prefs_displayed_notifications</string>
+    <string name="prefs_last_sync_date" translatable="false">prefs_last_sync_date</string>
+
+    <!-- Data sync xml settings strings -->
+    <string name="account_type" translatable="false">com.learnwithme.buildapps</string>
+    <string name="content_authority" translatable="false">com.learnwithme.buildapps.giantbomb</string>
+
+    <!-- A11y -->
+    <string name="a11y_widget_refresh">Refresh data</string>
+    <string name="a11y_character_portrait">Character portrait</string>
+    <string name="a11y_game_cover">Game cover</string>
+    <string name="a11y_platform_cover">Platform cover</string>
+
+    <!-- DUMMY TEXTS -->
+    <string name="lorem_ipsum" translatable="false">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+    the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of
+    type and scrambled it to make a type specimen book.
+    </string>
+
+    <string name="dummy_game_name" translatable="false">Desert Strike: Return to the Gulf</string>
+    <string name="dummy_game_review_with_text" translatable="false">No of Reviews: 10</string>
+    <string name="dummy_game_details_header" translatable="false">Desert Strike</string>
+    <string name="dummy_platform_name" translatable="false">Super Nintendo Entertainment System</string>
+    <string name="dummy_platform_abbreviation" translatable="false">SNES</string>
+    <string name="dummy_platform_company" translatable="false">Nintendo</string>
+    <string name="dummy_platform_other_company" translatable="false">Microsoft Studio</string>
+    <string name="dummy_platform_release_date" translatable="false">Mar 29, 2017</string>
+    <string name="dummy_date" translatable="false">Jun 7, 2017</string>
+    <string name="dummy_developer">by Electronic Arts</string>
+    <string name="dummy_developer_name">Electronic Arts</string>
+    <string name="dummy_games_count">Count: 10</string>
+    <string name="dummy_release_date">Mar 31, 1990</string>
+    <string name="dummy_character_name" translatable="false">Scott Steiner</string>
+    <string name="dummy_character_real_name" translatable="false">Scott Steiner</string>
+    <string name="dummy_character_aliases" translatable="false">Alias, Alias, Alias</string>
+    <string name="dummy_character_birthdate" translatable="false">Jun 28, 1989</string>
+    <string name="dummy_character_date_added" translatable="false">Aug 15, 1947</string>
+    <string name="dummy_character_date_last_updated" translatable="false">Jan 26, 1950</string>
+    <string name="dummy_character_franchise" translatable="false">XBox</string>
+</resources>

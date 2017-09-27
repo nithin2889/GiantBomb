@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.learnwithme.buildapps.giantbomb">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:name=".GiantBombApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <provider
+            android:name=".data.source.local.GameProvider"
+            android:authorities="com.learnwithme.buildapps.giantbomb"
+            android:exported="false" />
+
+        <activity
+            android:name=".features.navigation.NavigationActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".features.gamesdetails.GameDetailsActivity"
+            android:label="@string/game_details_activity_title"
+            android:parentActivityName=".features.navigation.NavigationActivity"
+            android:theme="@style/Details">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".features.navigation.NavigationActivity" />
+        </activity>
+
+        <activity
+            android:name=".features.platformdetails.PlatformDetailsActivity"
+            android:label="@string/platform_details_activity_title"
+            android:parentActivityName=".features.navigation.NavigationActivity"
+            android:theme="@style/Details">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".features.navigation.NavigationActivity" />
+        </activity>
+
+        <activity
+            android:name=".features.characterdetails.CharacterDetailsActivity"
+            android:label="@string/character_details_activity_title"
+            android:parentActivityName=".features.navigation.NavigationActivity"
+            android:theme="@style/Details">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".features.navigation.NavigationActivity" />
+        </activity>
+
+        <service
+            android:name=".features.sync.GameSyncService"
+            android:exported="false"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <service
+            android:name=".features.sync.GameAuthenticatorService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <receiver android:name=".features.widget.GameWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.learnwithme.buildapps.giantbomb.ACTION_DATA_UPDATED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+        </receiver>
+
+        <service
+            android:name=".features.widget.GameWidgetService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+    </application>
+
+</manifest>

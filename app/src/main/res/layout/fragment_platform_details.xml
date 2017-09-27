@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical">
+
+    <include layout="@layout/lce_loading_view" />
+
+    <include layout="@layout/lce_error_view" />
+
+    <LinearLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/material_card_edge_margin"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:orientation="vertical"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/platform_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/game_details_header_image_height"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/a11y_platform_cover"
+                    tools:src="@drawable/dummy_game_cover" />
+
+                <!-- Game info below -->
+                <TextView
+                    android:id="@+id/platform_details_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:paddingBottom="@dimen/material_card_title_block_large_padding_top"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingTop="@dimen/material_card_title_block_large_padding_top"
+                    android:textColor="@color/material_color_white"
+                    android:textSize="@dimen/material_card_title_block_large_title_text_size"
+                    tools:text="@string/dummy_platform_name" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:paddingBottom="@dimen/material_card_title_block_large_padding_bottom"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingTop="@dimen/material_card_title_block_large_padding_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/platform_details_company"
+                        android:textSize="@dimen/material_card_title_block_small_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/platform_details_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                        android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                        android:textSize="@dimen/material_card_title_block_small_text_size"
+                        tools:text="@string/dummy_platform_company" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/platform_details_release_date"
+                        android:textSize="@dimen/material_card_title_block_small_text_size"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/platform_release_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                        android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                        android:paddingTop="@dimen/material_card_title_block_large_subtitle_margin_top"
+                        android:textSize="@dimen/material_card_title_block_small_text_size"
+                        tools:text="@string/dummy_release_date" />
+
+                </GridLayout>
+
+                <TextView
+                    android:id="@+id/platform_details_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/material_card_supporting_text_padding_bottom"
+                    android:paddingEnd="@dimen/material_card_supporting_text_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_supporting_text_padding_horizontal"
+                    android:paddingTop="@dimen/material_card_supporting_text_padding_top"
+                    android:textSize="@dimen/material_card_supporting_text_text_size"
+                    tools:text="@string/lorem_ipsum" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/platform_details_games_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/material_card_edge_margin"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:orientation="vertical"
+            tools:targetApi="lollipop">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:paddingBottom="@dimen/material_card_title_block_large_padding_bottom_last_block"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingTop="@dimen/material_card_title_block_large_padding_top"
+                    android:text="@string/platform_details_company_name"
+                    android:textColor="@color/material_color_white"
+                    android:textSize="@dimen/material_card_title_block_large_title_text_size" />
+
+                <TextView
+                    android:id="@+id/platform_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/material_card_supporting_text_padding_bottom"
+                    android:paddingEnd="@dimen/material_card_supporting_text_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_supporting_text_padding_horizontal"
+                    android:paddingTop="@dimen/material_card_supporting_text_padding_top"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    tools:text="@string/dummy_platform_other_company" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</FrameLayout>

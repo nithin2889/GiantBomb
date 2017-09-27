@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin_value_half"
+    android:elevation="@dimen/cardview_default_elevation"
+    android:orientation="vertical"
+    tools:targetApi="lollipop">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/platform_cover"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/a11y_platform_cover"
+                tools:src="@drawable/dummy_game_cover" />
+
+            <ProgressBar
+                android:id="@+id/platform_cover_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:paddingBottom="@dimen/image_progressbar_padding"
+                android:paddingTop="@dimen/image_progressbar_padding" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/platform_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingBottom="@dimen/material_card_title_block_small_padding_vertical"
+            android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+            android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+            android:paddingTop="@dimen/material_card_title_block_small_padding_vertical"
+            android:textSize="@dimen/material_card_title_block_small_text_size"
+            android:textStyle="bold"
+            tools:text="@string/dummy_platform_name" />
+
+        <TextView
+            android:id="@+id/platform_company_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingEnd="@dimen/material_card_title_block_small_padding_vertical"
+            android:paddingStart="@dimen/material_card_title_block_small_padding_vertical"
+            android:textSize="@dimen/material_card_title_block_small_text_size"
+            tools:text="@string/dummy_platform_company" />
+
+        <TextView
+            android:id="@+id/platform_release_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="5"
+            android:paddingEnd="@dimen/material_card_title_block_small_padding_vertical"
+            android:paddingStart="@dimen/material_card_title_block_small_padding_vertical"
+            android:textColor="@color/colorSecondaryText"
+            android:textSize="@dimen/material_card_title_block_small_text_size"
+            tools:text="@string/dummy_platform_release_date" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

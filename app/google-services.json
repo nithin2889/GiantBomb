@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "66753614925",
+    "firebase_url": "https://giant-bomb-a23f3.firebaseio.com",
+    "project_id": "giant-bomb-a23f3",
+    "storage_bucket": "giant-bomb-a23f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:66753614925:android:6b2a45f68af1ba91",
+        "android_client_info": {
+          "package_name": "com.learnwithme.buildapps.giantbomb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "66753614925-krmncuvh1la1c6asopnqcaltv1amjkl5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.learnwithme.buildapps.giantbomb",
+            "certificate_hash": "2cfbcc8e7ad0fb29a45b1bfcf212c93c4d4cf46e"
+          }
+        },
+        {
+          "client_id": "66753614925-c37s5av3r3p5d4g0k6j3mttjtgo99j8n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvs3nC93Ovj5v72ZbW_aIW1hw-wqE3tmI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "66753614925-c37s5av3r3p5d4g0k6j3mttjtgo99j8n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

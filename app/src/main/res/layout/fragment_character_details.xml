@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical">
+
+    <include layout="@layout/lce_loading_view" />
+
+    <include layout="@layout/lce_error_view" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/material_card_edge_margin"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:gravity="top"
+        android:orientation="vertical"
+        tools:targetApi="lollipop">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/character_details_screen"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/game_details_header_image_height"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/a11y_character_portrait"
+                tools:src="@drawable/dummy_character_poster" />
+
+            <!-- Issue info below -->
+            <TextView
+                android:id="@+id/character_details_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingBottom="@dimen/material_card_title_block_large_padding_top"
+                android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                android:paddingTop="@dimen/material_card_title_block_large_padding_top"
+                android:textColor="@color/material_color_white"
+                android:textSize="@dimen/material_card_title_block_large_title_text_size"
+                tools:text="@string/dummy_character_name" />
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:paddingBottom="@dimen/material_card_title_block_large_padding_bottom"
+                android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                android:paddingTop="@dimen/material_card_title_block_large_padding_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/character_details_real_name"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/character_detail_real_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    tools:text="@string/dummy_character_real_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/character_details_aliases"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/character_detail_aliases"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    tools:text="@string/dummy_character_aliases" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/character_details_birth"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/character_detail_birthdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    tools:text="@string/dummy_character_birthdate" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/character_details_date_added"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/character_detail_date_added"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    tools:text="@string/dummy_character_date_added" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/character_details_date_last_updated"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/character_detail_date_last_updated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    tools:text="@string/dummy_character_date_last_updated" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/character_details_origin"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/character_detail_franchise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="@dimen/material_card_title_block_padding_horizontal"
+                    android:paddingStart="@dimen/material_card_title_block_padding_horizontal"
+                    android:textSize="@dimen/material_card_title_block_small_text_size"
+                    tools:text="@string/dummy_character_franchise" />
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/character_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/material_card_supporting_text_padding_bottom"
+                android:paddingEnd="@dimen/material_card_supporting_text_padding_horizontal"
+                android:paddingStart="@dimen/material_card_supporting_text_padding_horizontal"
+                android:paddingTop="@dimen/material_card_supporting_text_padding_top"
+                android:textSize="@dimen/material_card_supporting_text_text_size"
+                tools:text="@string/lorem_ipsum" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
