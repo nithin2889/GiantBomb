@@ -6,7 +6,7 @@ All game related data provided by [Giant Bomb API](https://www.giantbomb.com/api
 
 ### Installation instructions
 * Clone this repository using `git clone git@github.com:nithin2889/GiantBomb.git` command
-* Add **API_KEY** into your *gradle.properties* file (you can obtain a new API key [here](https://www.giantbomb.com/api/)
+* Add **API_KEY** into your *gradle.properties* file (you can obtain a new API key [here](https://www.giantbomb.com/api/))
 * Now you can build and install release version of the app using `installRelease` gradle task
 
 ### Rubric
