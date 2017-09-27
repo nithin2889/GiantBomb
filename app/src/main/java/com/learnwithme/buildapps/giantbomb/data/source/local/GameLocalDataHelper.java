@@ -99,8 +99,6 @@ public class GameLocalDataHelper {
     public void removeSavedGameFromDb(long gameId) {
         Uri deletionUri = ContentUtils
                 .buildDetailsUri(GameEntry.CONTENT_URI_SAVED_GAMES, gameId);
-        Log.d("gameId=>", String.valueOf(gameId));
-        Log.d("removeSavedGameFromDb=>", deletionUri.toString());
         contentResolver.delete(deletionUri, null, null);
     }
 
