@@ -1,17 +1,16 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
 
 android {
     signingConfigs {
         release {
-            keyAlias 'GiantBomb'
-            keyPassword 'NithAkhi2727'
+            keyAlias 'GiantGames'
+            keyPassword 'GiantGames2017'
             storeFile file('release.jks')
-            storePassword 'NithAkhi2727'
+            storePassword 'GiantGames2017'
         }
     }
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.learnwithme.buildapps.giantbomb"
         minSdkVersion 21
@@ -20,6 +19,7 @@ android {
         versionCode 1001
         versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
     }
     buildTypes {
         release {
@@ -38,8 +38,9 @@ android {
 }
 
 dependencies {
+
     // App
-    final SUPPORT_LIBRARY_VERSION = "25.3.1"
+    final SUPPORT_LIBRARY_VERSION = "25.4.0"
     final RX_ANDROID_VERSION = "2.0.1"
     final RX_JAVA_VERSION = "2.1.1"
     final RX_RELAY_VERSION = "2.0.0"
@@ -49,7 +50,7 @@ dependencies {
     final GSON_VERSION = "2.8.1"
     final AUTO_VALUE_VERSION = "1.4"
     final AUTO_VALUE_GSON_VERSION = "0.4.6"
-    final BUTTER_KNIFE_VERSION = "8.6.0"
+    final BUTTER_KNIFE_VERSION = "8.7.0"
     final GLIDE_VERSION = "3.8.0"
     final SHOWCASE_VIEW_VERSION = "5.4.3"
     final MATERIAL_VALUES_VERSION = "1.1.1"
@@ -62,14 +63,13 @@ dependencies {
     final MATERIAL_DATE_PICKER_VERSION = "3.2.2"
     final MATERIAL_SEARCH_VIEW_VERSION = "1.4.0"
     final JSOUP_VERSION = "1.10.3"
-    final FIREBASE_VERSION = "11.0.2"
+    final FIREBASE_VERSION = "11.6.0"
 
     // Testing
     final ESPRESSO_VERSION = "2.2.2"
     final JUNIT_VERSION = "4.12"
     final MOCKITO_VERSION = "2.8.47"
     final RUNNER_VERSION = "0.4"
-
     def daggerCompiler = "com.google.dagger:dagger-compiler:$DAGGER_VERSION"
     def junit = "junit:junit:${JUNIT_VERSION}"
     def mockito = "org.mockito:mockito-core:${MOCKITO_VERSION}"
@@ -80,10 +80,11 @@ dependencies {
     compile "com.android.support:design:${SUPPORT_LIBRARY_VERSION}"
     compile "com.android.support:cardview-v7:${SUPPORT_LIBRARY_VERSION}"
     compile "com.android.support:preference-v14:${SUPPORT_LIBRARY_VERSION}"
-    compile "com.android.support.constraint:constraint-layout:1.0.2"
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     // Firebase - Analytics
     compile "com.google.firebase:firebase-core:${FIREBASE_VERSION}"
+
     // Firebase - Crash Reporting
     compile "com.google.firebase:firebase-crash:${FIREBASE_VERSION}"
 
@@ -108,16 +109,14 @@ dependencies {
     compile "com.wdullaer:materialdatetimepicker:${MATERIAL_DATE_PICKER_VERSION}"
     compile "com.miguelcatalan:materialsearchview:${MATERIAL_SEARCH_VIEW_VERSION}"
     compile "org.jsoup:jsoup:${JSOUP_VERSION}"
-
+    compile "com.google.auto.value:auto-value:${AUTO_VALUE_VERSION}"
     provided "com.jakewharton.auto.value:auto-value-annotations:${AUTO_VALUE_VERSION}"
     provided "com.ryanharter.auto.value:auto-value-gson:${AUTO_VALUE_GSON_VERSION}"
-
     annotationProcessor "com.google.auto.value:auto-value:${AUTO_VALUE_VERSION}"
     annotationProcessor "com.ryanharter.auto.value:auto-value-gson:${AUTO_VALUE_GSON_VERSION}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${BUTTER_KNIFE_VERSION}"
     annotationProcessor "com.evernote:android-state-processor:${ANDROID_STATE_VERSION}"
     annotationProcessor "com.hannesdorfmann.fragmentargs:processor:${FRAGMENTARGS_VERSION}"
-
     annotationProcessor daggerCompiler
     testAnnotationProcessor daggerCompiler
     androidTestAnnotationProcessor daggerCompiler
