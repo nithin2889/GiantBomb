@@ -11,13 +11,15 @@ android {
     }
     compileSdkVersion 25
     buildToolsVersion '26.0.2'
+    flavorDimensions "default"
     defaultConfig {
         applicationId "com.learnwithme.buildapps.giantbomb"
         minSdkVersion 21
         //noinspection OldTargetApi
         targetSdkVersion 25
-        versionCode 1001
-        versionName "1.0.1"
+        versionCode 1002
+        versionName "1.0.2"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         signingConfig signingConfigs.release
     }
